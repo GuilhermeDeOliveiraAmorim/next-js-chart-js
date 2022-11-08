@@ -11,7 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { faker } from "@faker-js/faker";
+import { myData } from "../data/ghibli";
 
 ChartJS.register(
   CategoryScale,
@@ -32,32 +32,20 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Chart.js Line Chart",
+      text: "Studio Ghibli",
     },
   },
 };
 
-const labels = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "October",
-  "November",
-  "December",
-];
+const labels = myData.map((data) => data.title);
 
 export const data = {
   labels,
   datasets: [
     {
       fill: true,
-      label: "Dataset 2",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+      label: "rt_score",
+      data: myData.map((data) => data.rt_score),
       borderColor: "rgb(53, 162, 235)",
       backgroundColor: "rgba(53, 162, 235, 0.5)",
     },
