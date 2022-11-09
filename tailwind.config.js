@@ -6,7 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "cover-login": "url('/etqr6fOOCXQOgwrQXaKwenTSuzx.jpg')",
+        "bg-rick-and-morty": "url('/bg-rick-and-morty.jpg')",
+      },
+    },
   },
   plugins: [],
 };

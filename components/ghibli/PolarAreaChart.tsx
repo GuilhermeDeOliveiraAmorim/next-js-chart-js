@@ -7,7 +7,7 @@ import {
   Legend,
 } from "chart.js";
 import { PolarArea } from "react-chartjs-2";
-import { myData } from "../data/ghibli";
+import { myData } from "../../data/ghibli";
 
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 

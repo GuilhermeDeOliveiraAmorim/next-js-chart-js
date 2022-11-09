@@ -11,7 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { myData } from "../data/ghibli";
+import { rickAndMorty } from "../../data/rick_and_morty";
 
 ChartJS.register(
   CategoryScale,
@@ -37,15 +37,17 @@ export const options = {
   },
 };
 
-const labels = myData.map((data) => data.title);
+console.log(rickAndMorty.results[0].name);
+
+const labels = rickAndMorty.results.map((data) => data.name);
 
 export const data = {
   labels,
   datasets: [
     {
       fill: true,
-      label: "rt_score",
-      data: myData.map((data) => data.rt_score),
+      label: "episodes numbers",
+      data: rickAndMorty.results.map((data) => data.episode.length),
       borderColor: "rgb(53, 162, 235)",
       backgroundColor: "rgba(53, 162, 235, 0.5)",
     },
