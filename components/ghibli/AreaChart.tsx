@@ -39,7 +39,7 @@ export const options = {
 
 interface IGhibli {
   tipo: {} | undefined | unknown;
-  labels: {} | undefined | unknown;
+  labels: string[];
 }
 
 export function AreaChart(props: IGhibli) {
@@ -52,8 +52,8 @@ export function AreaChart(props: IGhibli) {
         fill: true,
         label: "rt_score",
         data: tipo,
-        borderColor: "rgb(53, 162, 235)",
-        backgroundColor: "rgba(53, 162, 235, 0.5)",
+        borderColor: "rgb(150, 52, 132)",
+        backgroundColor: "rgba(48, 102, 190, 0.5)",
       },
     ],
   };

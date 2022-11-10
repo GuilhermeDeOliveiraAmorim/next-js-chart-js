@@ -9,7 +9,7 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { myData } from "../../data/ghibli";
+import { rickAndMorty } from "../../data/rick_and_morty";
 
 ChartJS.register(
   CategoryScale,
@@ -28,25 +28,35 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Studio Ghibli rt_score running_time",
+      text: "Vertical Bar Chart: type",
     },
   },
 };
 
-const labels = myData.map((data) => data.title);
+function groupBy(array: any, key: any) {
+  return array.reduce((acc: any, item: any) => {
+    if (!acc[item[key]]) acc[item[key]] = [];
+    acc[item[key]].push(item);
+    return acc;
+  }, {});
+}
+
+const characterFiltered = groupBy(rickAndMorty, "type");
+
+const arrTypeCount = [];
+
+for (const [key, value] of Object.entries(characterFiltered)) {
+  arrTypeCount.push({ label: key, quantity: value.length });
+}
+const labels = arrTypeCount.map((data) => data.label);
 
 export const data = {
   labels,
   datasets: [
     {
-      label: "rt_score",
-      data: myData.map((data) => data.rt_score),
+      label: "quantity x type",
+      data: arrTypeCount.map((data) => data.quantity),
       backgroundColor: "rgba(255, 99, 132, 0.5)",
-    },
-    {
-      label: "running_time",
-      data: myData.map((data) => data.running_time),
-      backgroundColor: "rgba(53, 162, 120, 0.5)",
     },
   ],
 };

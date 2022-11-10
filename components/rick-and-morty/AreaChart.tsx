@@ -37,9 +37,9 @@ export const options = {
   },
 };
 
-console.log(rickAndMorty.results[0].name);
+console.log(rickAndMorty[0].name);
 
-const labels = rickAndMorty.results.map((data) => data.name);
+const labels = rickAndMorty.map((data) => data.name);
 
 export const data = {
   labels,
@@ -47,7 +47,7 @@ export const data = {
     {
       fill: true,
       label: "episodes numbers",
-      data: rickAndMorty.results.map((data) => data.episode.length),
+      data: rickAndMorty.map((data) => data.episode.length),
       borderColor: "rgb(53, 162, 235)",
       backgroundColor: "rgba(53, 162, 235, 0.5)",
     },

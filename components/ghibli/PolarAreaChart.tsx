@@ -16,7 +16,7 @@ export const data = {
   datasets: [
     {
       label: "# of Votes",
-      data: myData.map((data) => data.rt_score),
+      data: myData.map((data) => data.rt_score).sort(),
       backgroundColor: [
         "rgba(255, 99, 132, 0.5)",
         "rgba(54, 162, 235, 0.5)",

@@ -28,7 +28,7 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Studio Ghibli rt_score running_time",
+      text: "Vertical Bar Char: rt_score x release_date x running_time",
     },
   },
 };
@@ -39,14 +39,19 @@ export const data = {
   labels,
   datasets: [
     {
-      label: "rt_score",
+      label: "Score",
       data: myData.map((data) => data.rt_score),
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      backgroundColor: "rgba(150, 52, 132, 0.5)",
     },
     {
-      label: "running_time",
+      label: "Date",
+      data: myData.map((data) => data.release_date),
+      backgroundColor: "rgba(48, 102, 190, 0.5)",
+    },
+    {
+      label: "Time",
       data: myData.map((data) => data.running_time),
-      backgroundColor: "rgba(53, 162, 120, 0.5)",
+      backgroundColor: "rgba(42, 245, 255, 0.5)",
     },
   ],
 };

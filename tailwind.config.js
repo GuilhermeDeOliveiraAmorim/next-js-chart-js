@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "cover-login": "url('/etqr6fOOCXQOgwrQXaKwenTSuzx.jpg')",
-        "bg-rick-and-morty": "url('/bg-rick-and-morty.jpg')",
+        "studio-ghibli": "url('/etqr6fOOCXQOgwrQXaKwenTSuzx.jpg')",
+        "rick-and-morty": "url('/bg-rick-and-morty.jpg')",
       },
     },
   },
