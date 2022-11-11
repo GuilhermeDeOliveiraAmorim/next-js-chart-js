@@ -1,10 +1,9 @@
 import { AreaChart } from "../../components/rick-and-morty/AreaChart";
-import { MultiaxisLineChart } from "../../components/ghibli/MultiaxisLineChart";
+import { MultiaxisLineChart } from "../../components/rick-and-morty/MultiaxisLineChart";
 import { PolarAreaChart } from "../../components/rick-and-morty/PolarAreaChart";
-import { HiCog } from "react-icons/hi";
-import VerticalBarChart from "../../components/rick-and-morty/VerticalBarChart";
 import { Nav } from "../../components/util/nav";
 import { Footer } from "../../components/util/footer";
+import VerticalBarChart from "../../components/rick-and-morty/VerticalBarChart";
 
 export default function RickAndMorty() {
   return (

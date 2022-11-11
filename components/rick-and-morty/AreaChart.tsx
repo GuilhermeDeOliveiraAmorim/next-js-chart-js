@@ -32,7 +32,7 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Studio Ghibli",
+      text: "Rick And Morty",
     },
   },
 };
