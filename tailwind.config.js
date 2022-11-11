@@ -10,6 +10,7 @@ module.exports = {
       backgroundImage: {
         "studio-ghibli": "url('/etqr6fOOCXQOgwrQXaKwenTSuzx.jpg')",
         "rick-and-morty": "url('/bg-rick-and-morty.jpg')",
+        "coin-cap": "url('/coin-cap.jpg')",
       },
     },
   },

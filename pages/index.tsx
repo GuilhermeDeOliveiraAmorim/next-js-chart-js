@@ -27,6 +27,13 @@ export default function Home() {
               </div>
             </div>
           </Link>
+          <Link href={"/coin-cap"}>
+            <div className="border hover:shadow-xl cursor-pointer border-spacing-2 bg-coin-cap flex justify-center items-center rounded-3xl h-40  bg-no-repeat bg-center bg-cover">
+              <div className="flex justify-center items-center rounded-3xl h-40 w-full bg-opacity-50 bg-black">
+                <span className="text-white text-2xl">Coin Cap</span>
+              </div>
+            </div>
+          </Link>
         </div>
       </main>
       <Footer />

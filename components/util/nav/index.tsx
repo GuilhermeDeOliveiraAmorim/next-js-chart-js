@@ -22,6 +22,12 @@ export function Nav() {
         >
           Rick And Morty
         </Link>
+        <Link
+          href={"coin-cap"}
+          className="bg-slate-300 p-2 rounded-lg hover:bg-slate-200"
+        >
+          Coin Cap
+        </Link>
       </div>
     </nav>
   );
