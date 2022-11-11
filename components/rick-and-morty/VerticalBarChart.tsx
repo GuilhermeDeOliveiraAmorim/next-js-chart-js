@@ -33,29 +33,36 @@ export const options = {
   },
 };
 
-function groupBy(array: any, key: any) {
-  return array.reduce((acc: any, item: any) => {
-    if (!acc[item[key]]) acc[item[key]] = [];
-    acc[item[key]].push(item);
-    return acc;
-  }, {});
-}
+const arrJustTypes: string[] = [];
 
-const characterFiltered = groupBy(rickAndMorty, "type");
+rickAndMorty.forEach((element) => {
+  arrJustTypes.push(element.type);
+});
 
-const arrTypeCount = [];
+const arrTypes = arrJustTypes.filter(
+  (key, i) => arrJustTypes.indexOf(key) === i
+);
 
-for (const [key, value] of Object.entries(characterFiltered)) {
-  arrTypeCount.push({ label: key, quantity: value.length });
-}
-const labels = arrTypeCount.map((data) => data.label);
+const typeCount: { type: string; count: number }[] = [];
+
+arrTypes.forEach((e) => {
+  var countType = 0;
+  rickAndMorty.forEach((element) => {
+    if (e === element.type) {
+      countType++;
+    }
+  });
+  typeCount.push({ type: e, count: countType });
+});
+
+const labels = typeCount.map((data) => data.type);
 
 export const data = {
   labels,
   datasets: [
     {
       label: "quantity x type",
-      data: arrTypeCount.map((data) => data.quantity),
+      data: typeCount.map((data) => data.count),
       backgroundColor: "rgba(255, 99, 132, 0.5)",
     },
   ],

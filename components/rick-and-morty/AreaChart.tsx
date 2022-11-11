@@ -37,8 +37,6 @@ export const options = {
   },
 };
 
-console.log(rickAndMorty[0].name);
-
 const labels = rickAndMorty.map((data) => data.name);
 
 export const data = {
